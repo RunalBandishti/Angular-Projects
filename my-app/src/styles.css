@@ -1,0 +1,8 @@
+
+@import '../node_modules/bulma/css/bulma.min.css';
+
+body{
+    background-color:black;
+    height: 100vh;
+    width: 100vw;
+}

@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="columns is-centered">
+    <div class="box column is-one-third has-background-dark">
+      <h1 class="title has-text-centered has-text-white-ter">
+        Password Generator
+      </h1>
+
+      <div class="field has-text-white-ter">
+        <label>Length</label>
+        <input class="input" (input)="onChangeLength($event.target.value)" />
+      </div>
+
+      <div class="field has-text-white">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseLetters()" type="checkbox" />
+            Use Letters
+          </label>
+        </div>
+      </div>
+
+      <div class="field has-text-white-ter">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseNumbers()" type="checkbox" />
+            Use Numbers
+          </label>
+        </div>
+      </div>
+
+      <div class="field has-text-white-ter">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseSymbols()" type="checkbox" />
+            Use Symbols
+          </label>
+        </div>
+      </div>
+
+      <button
+        [disabled]="
+          !(length && (includeLetters || includeSymbols || includeNumbers))
+        "
+        (click)="onButtonClick()"
+        class="button is-link is-fullwidth"
+      >
+        Generate!
+      </button>
+
+      <div class="box has-text-white-ter has-background-dark" *ngIf="password">
+        <label>Your Password</label>
+        <input class="input" [value]="password" />
+      </div>
+    </div>
+  </div>
+</div>
