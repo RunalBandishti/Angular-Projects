@@ -1,0 +1,15 @@
+.page-link {
+    cursor: pointer;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
