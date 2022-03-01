@@ -1,0 +1,8 @@
+<div class="box has-background-dark">
+    <form (submit)="onSubmit($event)">
+    <input 
+    placeholder="Enter Seach Term"
+    class="input"
+    (input)="term = $any($event.target).value" />
+</form>
+</div>

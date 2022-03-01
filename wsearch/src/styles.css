@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bulma/css/bulma.min.css';
+
+body{
+    background-color:rgb(90, 90, 90);
+}
+
+.searchmatch{
+    font-weight: bold;
+}
+ 
+a:hover{
+    color:white !important;
+}
+
